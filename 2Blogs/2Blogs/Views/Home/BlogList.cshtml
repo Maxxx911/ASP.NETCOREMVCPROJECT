@@ -1,0 +1,55 @@
+﻿
+@model _2Blogs.Models.BlogViewModels.BlogViewModel
+@{
+    // ViewData["Title"] = "BlogList";
+
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Blog LIst</h3>
+    </div>
+    @foreach (var blog in Model.Blogs)
+    {
+        <div class="container">
+            <hr class="my-4">
+            <div class="position-relative overflow-hidden p-1 p-md-2 m-md-1 text-center text-white bg-secondary">
+                <div class="col-md-5 p-lg-3 mx-auto my-5">
+                    <h1 class="display-4 font-weight-normal">@blog.Title</h1>
+                    <p class="lead font-weight-normal">@blog.Description </p>
+                    <a asp-action="PostList" asp-controller="Posts" asp-route-id="@blog.Id">Read.....</a>
+                </div>
+                @*@foreach (var usr in Model.User)
+                {
+                    @if (blog.User == usr)
+                    {
+
+                        <p class="text-right p-1">
+                            <a class="text-white font-italic p-3" href="#">by: @usr.E </a>
+                        </p>
+                    }
+
+                }*@
+                @if (blog.User != null)
+                {
+                    <p class="text-right p-1">
+                        <a class="text-white font-italic p-3" href="#">by: @blog.User.Email </a>
+                    </p>
+                }
+
+            </div>
+        </div>
+
+
+    }
+
+</body>
+</html>
+

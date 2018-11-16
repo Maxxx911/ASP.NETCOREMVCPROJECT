@@ -1,0 +1,34 @@
+﻿@model _2Blogs.Models.Blog
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+    <h2 class="text-center">Create Blog</h2>
+    <hr />
+    <div class="row">
+        <div class="container">
+            <form asp-action="CreateBlog" asp-controller="Home">
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">Description</label>
+                    <input type="text" asp-for="Description" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label">Title</label>
+                    <input type="text" asp-for="Title" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="User" class="control-label">Date</label>
+                    <input type="date" asp-for="User" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Send" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Home/Index">Back to List</a>
+    </div>
+</div>

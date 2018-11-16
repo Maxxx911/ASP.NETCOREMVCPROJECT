@@ -1,0 +1,33 @@
+﻿@model _2Blogs.Models.PostViewModels.ListPostViewModel
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    <a asp-action="Create" asp-route-id="@Model.Blog.Id">Create New</a>
+</p>
+<table class="table">
+    <tbody>
+@foreach (var item in Model.Posts) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Blog.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

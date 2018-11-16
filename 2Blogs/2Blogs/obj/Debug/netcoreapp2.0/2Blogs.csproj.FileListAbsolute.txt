@@ -1,0 +1,12 @@
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\bin\Debug\netcoreapp2.0\2Blogs.deps.json
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\bin\Debug\netcoreapp2.0\2Blogs.runtimeconfig.json
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\bin\Debug\netcoreapp2.0\2Blogs.runtimeconfig.dev.json
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\bin\Debug\netcoreapp2.0\2Blogs.dll
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\bin\Debug\netcoreapp2.0\2Blogs.pdb
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.csprojAssemblyReference.cache
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.csproj.CoreCompileInputs.cache
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.AssemblyInfoInputs.cache
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.AssemblyInfo.cs
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.dll
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.pdb

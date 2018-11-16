@@ -1,0 +1,29 @@
+﻿@model _2Blogs.Models.PostViewModels.CreatePostViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+<div class=" container">
+    <p> </p>
+    <hr class="my-4">
+    <h2>Create</h2>
+    <form asp-action="Create" asp-controller="Posts">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Title" class="control-label">Title</label>
+            <input type="text" asp-for="Title" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="control-label">Description</label>
+            <input type="text" asp-for="Description" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="BlogId" class="control-label" hidden>ID</label>
+            <input type="text" asp-for="BlogId" class="form-control" hidden />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Добавить" class="btn btn-default" />
+        </div>
+    </form>
+</div>
+
+

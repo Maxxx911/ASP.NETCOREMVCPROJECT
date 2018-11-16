@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>@ViewData["Title"] Blogs</title>
+</head>
+<body>
+    <hr class="my-4">
+    <header class="blog-header py-3">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">Original Site Name</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="BlogList">List of blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="CreateBlog">Create blog</a>
+                    </li>
+                    <li class="nav-item">
+                        @if (ViewContext.HttpContext.User.IsInRole("admin"))
+                        {
+                            <a class="nav-link" asp-controller="Roles" asp-action="Index">Admin</a>
+                        }
+
+                    </li>
+                </ul>
+
+                @await Html.PartialAsync("_LoginPartial")
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+    <hr />
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2018 Created by Maxim Spaseonav </p>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
