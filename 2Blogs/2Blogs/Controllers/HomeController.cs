@@ -55,11 +55,28 @@ namespace _2Blogs.Controllers
         [Authorize(Roles = "admin, user")]
         public async Task<IActionResult> CreateBlog(Blog blog)
         {
-            ApplicationUser user = await _userManager.GetUserAsync(HttpContext.User);
-            blog.User = user;
-            db.Blogs.Add(blog);
-            await db.SaveChangesAsync();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                ApplicationUser user = await _userManager.GetUserAsync(HttpContext.User);
+                blog.User = user;
+                db.Blogs.Add(blog);
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View(blog);
+        }
+
+        public async Task<IActionResult> DeleateBlog(string blogid)
+        {
+            Blog delblog = await db.Blogs.FindAsync(blogid);
+            
+            if (delblog != null)
+            {
+                db.Blogs.Remove(delblog);
+                await db.SaveChangesAsync();
+                return RedirectToAction("BlogList");
+            }
+            return View();
         }
 
         public IActionResult Error()

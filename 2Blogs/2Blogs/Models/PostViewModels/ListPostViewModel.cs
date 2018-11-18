@@ -7,7 +7,8 @@ namespace _2Blogs.Models.PostViewModels
 {
     public class ListPostViewModel
     {
-        public Blog Blog { get; set; }
+        public string BlogID { get; set; }
+        public string UserId { get; set; }
         public IEnumerable<Post> Posts { get; set; }
         public ListPostViewModel()
         {

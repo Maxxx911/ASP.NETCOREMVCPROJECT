@@ -11,5 +11,10 @@ namespace _2Blogs.Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public List<Blog> Blogs { get; set; }
+        public ApplicationUser()
+        {
+            Blogs = new List<Blog>();
+        }
     }
 }

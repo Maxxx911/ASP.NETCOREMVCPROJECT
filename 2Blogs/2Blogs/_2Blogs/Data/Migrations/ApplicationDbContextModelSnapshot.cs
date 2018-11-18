@@ -80,9 +80,13 @@ namespace _2Blogs.Data.Migrations
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(180);
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(30);
 
                     b.Property<string>("UserId");
 
@@ -95,7 +99,7 @@ namespace _2Blogs.Data.Migrations
 
             modelBuilder.Entity("_2Blogs.Models.Post", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("BlogID");
@@ -222,7 +226,7 @@ namespace _2Blogs.Data.Migrations
             modelBuilder.Entity("_2Blogs.Models.Blog", b =>
                 {
                     b.HasOne("_2Blogs.Models.ApplicationUser", "User")
-                        .WithMany()
+                        .WithMany("Blogs")
                         .HasForeignKey("UserId");
                 });
 

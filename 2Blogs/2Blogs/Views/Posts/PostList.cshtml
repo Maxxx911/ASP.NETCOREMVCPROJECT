@@ -1,33 +1,28 @@
 ﻿@model _2Blogs.Models.PostViewModels.ListPostViewModel
-
+@inject UserManager<ApplicationUser> UserManager
 @{
     ViewData["Title"] = "View";
 }
 
-<h2>View</h2>
+<div class="container">
+    <h2 class="text-center">Posts</h2>
+    <hr class="my-4">
+    @if (Model.UserId == UserManager.GetUserId(User))
+    {
+        <a class="btn btn-info" asp-action="Create" asp-route-id="@Model.BlogID" asp-route-userid="@Model.UserId">Create new post</a>
+        <a class="btn btn-danger" asp-controller="Home" asp-action="DeleateBlog" asp-route-blogid="@Model.BlogID">Delete Blog</a>
+    }
+    @foreach (var p in Model.Posts)
+    {
+        <div class="blog-post">
+            <h2 class="blog-post-title text-center">@p.Title</h2>
+            <p>@p.Description</p>
+            @if (Model.UserId == UserManager.GetUserId(User))
+            {
+                <a class="btn btn-danger" asp-action="DeletePost" asp-route-postid="@p.Id" asp-route-userid="@Model.UserId">Delete Post</a>
 
-<p>
-    <a asp-action="Create" asp-route-id="@Model.Blog.Id">Create New</a>
-</p>
-<table class="table">
-    <tbody>
-@foreach (var item in Model.Posts) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Blog.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+            }
+        </div>
+    <hr class="my-4" />
+    }
+</div>

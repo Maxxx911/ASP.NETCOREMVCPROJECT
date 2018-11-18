@@ -86,7 +86,7 @@ namespace _2Blogs.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
+        #region DontOpen
         [HttpGet]
         [AllowAnonymous]
         public async Task<IActionResult> LoginWith2fa(bool rememberMe, string returnUrl = null)
@@ -203,7 +203,7 @@ namespace _2Blogs.Controllers
         {
             return View();
         }
-
+        #endregion
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Register(string returnUrl = null)
@@ -220,16 +220,18 @@ namespace _2Blogs.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,FirstName = model.FirstName };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName };
                 var result = await _userManager.CreateAsync(user, model.Password);
-                await _userManager.AddToRoleAsync(user, "user");
+                
                 if (result.Succeeded)
                 {
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
                     await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
+                    await _userManager.AddToRoleAsync(user, "user");
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     _logger.LogInformation("User created a new account with password.");
@@ -251,6 +253,8 @@ namespace _2Blogs.Controllers
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
+        #region DontOpen
+        
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -347,6 +351,7 @@ namespace _2Blogs.Controllers
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
 
+        #endregion
         [HttpGet]
         [AllowAnonymous]
         public IActionResult ForgotPassword()

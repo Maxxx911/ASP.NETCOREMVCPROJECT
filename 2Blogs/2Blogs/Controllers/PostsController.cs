@@ -7,6 +7,7 @@ using _2Blogs.Models;
 using _2Blogs.Models.BlogViewModels;
 using _2Blogs.Models.PostViewModels;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _2Blogs.Controllers
@@ -14,18 +15,20 @@ namespace _2Blogs.Controllers
     public class PostsController : Controller
     {
         // GET: Posts
+
         ApplicationDbContext _context;
         public PostsController(ApplicationDbContext context)
         {
             _context = context;
         }
-        public ActionResult PostList(string id)
+        public ActionResult PostList(string id, string userid)
         {
+
             ListPostViewModel listPostViewModel = new ListPostViewModel();
             var posts = _context.Posts.ToList().Where(p => p.BlogID == id);
             listPostViewModel.Posts = posts;
-            listPostViewModel.Blog = _context.Blogs.Find(id);
-
+            listPostViewModel.BlogID = id;
+            listPostViewModel.UserId = userid;
             return View(listPostViewModel);
         }
 
@@ -36,11 +39,9 @@ namespace _2Blogs.Controllers
         }
 
         // GET: Posts/Create
-        public async Task<IActionResult> Create(string id)
+        public async Task<IActionResult> Create(string id, string userid)
         {
-            Blog blog = await _context.Blogs.FindAsync(id);
-
-            CreatePostViewModel model = new CreatePostViewModel() { BlogId = blog.Id, Blog = blog };
+            CreatePostViewModel model = new CreatePostViewModel() { BlogId = id, UserId = userid };
             return View(model);
         }
 
@@ -49,15 +50,19 @@ namespace _2Blogs.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(CreatePostViewModel model)
         {
+            Blog blog = await _context.Blogs.FindAsync(model.BlogId);
             Post newPost = new Post()
             {
                 Description = model.Description,
                 Title = model.Title,
-                BlogID = model.BlogId
+                BlogID = model.BlogId,
+                Blog = blog
+                
             };
+            blog.Posts.Add(newPost);
             _context.Posts.Add(newPost);
             await _context.SaveChangesAsync();
-            return RedirectToAction("PostList", new {id = newPost.BlogID });
+            return RedirectToAction("PostList", new {id = newPost.BlogID, userid = model.UserId  });
 
         }
 
@@ -85,8 +90,15 @@ namespace _2Blogs.Controllers
         //}
 
         // GET: Posts/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<IActionResult> DeletePost(string postid, string userid)
         {
+            Post delpost = await _context.Posts.FindAsync(postid);
+            if (delpost != null)
+            {
+                _context.Posts.Remove(delpost);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("PostList", new { id = delpost.BlogID, userid = userid});
+            }
             return View();
         }
 
