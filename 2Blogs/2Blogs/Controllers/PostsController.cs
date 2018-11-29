@@ -39,7 +39,7 @@ namespace _2Blogs.Controllers
         }
 
         // GET: Posts/Create
-        public async Task<IActionResult> Create(string id, string userid)
+        public  IActionResult Create(string id, string userid)
         {
             CreatePostViewModel model = new CreatePostViewModel() { BlogId = id, UserId = userid };
             return View(model);

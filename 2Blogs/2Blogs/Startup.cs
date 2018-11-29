@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using _2Blogs.Data;
 using _2Blogs.Models;
 using _2Blogs.Services;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
 
 namespace _2Blogs
 {
@@ -35,10 +38,26 @@ namespace _2Blogs
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
 
-            services.AddMvc();
+            services.AddMvc().AddDataAnnotationsLocalization(options => {
+                options.DataAnnotationLocalizerProvider = (type, factory) =>
+                    factory.Create(typeof(SharedResource));
+            }).AddViewLocalization();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("en"),
+                    new CultureInfo("fr"),
+                    new CultureInfo("ru")
+                };
+
+                options.DefaultRequestCulture = new RequestCulture("ru");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -52,9 +71,11 @@ namespace _2Blogs
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(locOptions.Value);
 
+            app.UseDefaultFiles();
             app.UseStaticFiles();
-
             app.UseAuthentication();
 
             app.UseMvc(routes =>

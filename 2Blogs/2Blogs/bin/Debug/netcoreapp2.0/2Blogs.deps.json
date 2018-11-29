@@ -31,6 +31,14 @@
         "runtime": {
           "2Blogs.dll": {}
         },
+        "resources": {
+          "eu/2Blogs.resources.dll": {
+            "locale": "eu"
+          },
+          "ru/2Blogs.resources.dll": {
+            "locale": "ru"
+          }
+        },
         "compile": {
           "2Blogs.dll": {}
         }
