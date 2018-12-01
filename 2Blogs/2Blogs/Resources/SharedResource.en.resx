@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
   <data name="SharedAdminMenu" xml:space="preserve">
     <value>Admin</value>
   </data>
@@ -125,8 +128,5 @@
   </data>
   <data name="SharedCreateBlog" xml:space="preserve">
     <value>Creating blog</value>
-  </data>
-  <data name="SharedHome" xml:space="preserve">
-    <value>Home</value>
   </data>
 </root>

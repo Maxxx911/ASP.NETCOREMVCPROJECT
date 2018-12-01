@@ -32,8 +32,11 @@
           "2Blogs.dll": {}
         },
         "resources": {
-          "eu/2Blogs.resources.dll": {
-            "locale": "eu"
+          "en/2Blogs.resources.dll": {
+            "locale": "en"
+          },
+          "fr/2Blogs.resources.dll": {
+            "locale": "fr"
           },
           "ru/2Blogs.resources.dll": {
             "locale": "ru"

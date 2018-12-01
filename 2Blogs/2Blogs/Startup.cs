@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +10,7 @@ using _2Blogs.Services;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
+using _2Blogs.Models.Hubs;
 
 namespace _2Blogs
 {
@@ -39,7 +36,7 @@ namespace _2Blogs
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-
+            services.AddSignalR();
             services.AddMvc().AddDataAnnotationsLocalization(options => {
                 options.DataAnnotationLocalizerProvider = (type, factory) =>
                     factory.Create(typeof(SharedResource));
@@ -63,7 +60,7 @@ namespace _2Blogs
         {
             if (env.IsDevelopment())
             {
-                app.UseBrowserLink();
+                
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
@@ -78,6 +75,10 @@ namespace _2Blogs
             app.UseStaticFiles();
             app.UseAuthentication();
 
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<ChatHub>("/chat");
+            });
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

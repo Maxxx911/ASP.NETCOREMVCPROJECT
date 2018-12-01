@@ -4,7 +4,6 @@ D:\labs\Igi\2Blogs\2Blogs\2Blogs\bin\Debug\netcoreapp2.0\2Blogs.runtimeconfig.de
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\bin\Debug\netcoreapp2.0\2Blogs.dll
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\bin\Debug\netcoreapp2.0\2Blogs.pdb
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.csproj.CoreCompileInputs.cache
-D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.AssemblyInfoInputs.cache
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.AssemblyInfo.cs
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.dll
@@ -26,3 +25,4 @@ D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.Resources.Views.
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.Resources.SharedResource.en.resources
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.Resources.SharedResource.fr.resources
 D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\2Blogs.Resources.SharedResource.ru.resources
+D:\labs\Igi\2Blogs\2Blogs\2Blogs\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

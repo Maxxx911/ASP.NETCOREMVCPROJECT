@@ -65,6 +65,20 @@ namespace _2Blogs.Controllers
             return RedirectToAction("PostList", new {id = newPost.BlogID, userid = model.UserId  });
 
         }
+        public async Task<ActionResult> PostDetail(string id)
+        {
+            Post post = await _context.Posts.FindAsync(id);
+            PostDetailViewModel postdet = new PostDetailViewModel();
+            if (post!=null)
+            {
+               
+                postdet.Description= post.Description;
+                postdet.Title = post.Title;
+
+
+            }
+            return View(postdet);
+        }
 
         // GET: Posts/Edit/5
         public ActionResult Edit(int id)

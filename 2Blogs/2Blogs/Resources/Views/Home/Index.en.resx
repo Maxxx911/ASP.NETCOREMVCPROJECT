@@ -117,11 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin menu</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
   <data name="CreateBlog" xml:space="preserve">
     <value>Creating blog</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Here you will find blogs of various people.You can also tell everyone that you are worried or will share different experiences or just interesting life stories by simply creating your own personal blog.</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ListBlog" xml:space="preserve">
+    <value>List of blogs</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome to web site</value>

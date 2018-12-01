@@ -15,7 +15,9 @@
     @foreach (var p in Model.Posts)
     {
         <div class="blog-post">
-            <h2 class="blog-post-title text-center">@p.Title</h2>
+            <h2 class="blog-post-title text-center">
+                <a asp-controller = "Posts" asp-action="PostDetail" asp-route-id="@p.Id" >@p.Title</a>
+            </h2>
             <p>@p.Description</p>
             @if (Model.UserId == UserManager.GetUserId(User))
             {

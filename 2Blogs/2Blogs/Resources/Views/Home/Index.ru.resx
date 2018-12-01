@@ -117,11 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Admin" xml:space="preserve">
+    <value>Меню админа</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Чат</value>
+  </data>
   <data name="CreateBlog" xml:space="preserve">
     <value>Создать свой блог</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Здесь вы найдете блоги разных людей. Вы также можете рассказать всем, что вы беспокоитесь или будете делиться опытом или просто интересными историями жизни, просто создавая свой собственный блог.</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>На главную</value>
+  </data>
+  <data name="ListBlog" xml:space="preserve">
+    <value>Список блогов</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Отправить</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Добро пожаловать на блогхост</value>
