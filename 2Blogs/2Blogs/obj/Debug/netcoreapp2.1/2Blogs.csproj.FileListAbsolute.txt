@@ -161,3 +161,6 @@ D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\obj\Debug\ne
 D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\obj\Debug\netcoreapp2.1\en\2Blogs.resources.dll
 D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\obj\Debug\netcoreapp2.1\fr\2Blogs.resources.dll
 D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\obj\Debug\netcoreapp2.1\ru\2Blogs.resources.dll
+D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\obj\Debug\netcoreapp2.1\en\2Blogs.resources.cs
+D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\obj\Debug\netcoreapp2.1\fr\2Blogs.resources.cs
+D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\obj\Debug\netcoreapp2.1\ru\2Blogs.resources.cs

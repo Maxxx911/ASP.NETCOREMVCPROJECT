@@ -90,7 +90,7 @@ using Microsoft.AspNetCore.Localization;
     ");
             EndContext();
             BeginContext(1107, 36, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a1b2d0d2ef14046bbed4037d783e36a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9cf06fff6a304653a2d5d459e45897dd", async() => {
                 BeginContext(1130, 9, true);
                 WriteLiteral("Add Roles");
                 EndContext();
@@ -112,7 +112,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(1149, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d44666077bbb40a8895e8580246ca5c7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d1c1437d336844f396de89dd65ef862b", async() => {
                 BeginContext(1174, 9, true);
                 WriteLiteral("User List");
                 EndContext();
@@ -134,7 +134,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(1193, 30, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c95a24ee071044df80fa3fd265643ebf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8cba2a9115b64f10a32544f25db5be14", async() => {
                 BeginContext(1210, 9, true);
                 WriteLiteral("Blog List");
                 EndContext();

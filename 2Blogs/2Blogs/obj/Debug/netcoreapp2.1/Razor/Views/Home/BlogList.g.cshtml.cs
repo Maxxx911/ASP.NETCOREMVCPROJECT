@@ -92,7 +92,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("<!doctype html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(138, 1390, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c003cc63c3644ea1b99b549b72a83c21", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "43da0ccef78a482996d77a01e13533bf", async() => {
                 BeginContext(144, 69, true);
                 WriteLiteral("\r\n    <div class=\"container my-5\">\r\n        <div class=\"card-deck\">\r\n");
                 EndContext();
@@ -110,7 +110,7 @@ using Microsoft.AspNetCore.Localization;
                             ");
                 EndContext();
                 BeginContext(591, 215, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3cf3bd7212b44f51ba23b9e48c1323ff", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bd8770159cae45719591575c4d4559fe", async() => {
                     BeginContext(696, 106, true);
                     WriteLiteral("\r\n                                <div class=\"mask rgba-white-slight\"></div>\r\n                            ");
                     EndContext();
@@ -156,7 +156,7 @@ using Microsoft.AspNetCore.Localization;
                 WriteLiteral("\r\n                        </div>\r\n                        <div class=\"card-body  flex-column\">\r\n\r\n                            <h3 class=\"card-title\">\r\n                                ");
                 EndContext();
                 BeginContext(989, 138, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d0e97977d36a4a0abcc1409d875393e2", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1b4471ed85c24348b6cb247666651a04", async() => {
                     BeginContext(1113, 10, false);
 #line 25 "D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\Views\Home\BlogList.cshtml"
                                                                                                                                                       Write(blog.Title);
@@ -217,7 +217,7 @@ using Microsoft.AspNetCore.Localization;
                 WriteLiteral("</p>\r\n\r\n                            ");
                 EndContext();
                 BeginContext(1266, 122, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4622e63bbfd54c4c82e3ac145ad61721", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "64eaf4a86a914609a2e17affad210b2c", async() => {
                     BeginContext(1371, 13, true);
                     WriteLiteral("Continue read");
                     EndContext();

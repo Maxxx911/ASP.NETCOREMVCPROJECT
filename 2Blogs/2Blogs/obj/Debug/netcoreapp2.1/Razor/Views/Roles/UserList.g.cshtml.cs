@@ -97,7 +97,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("\r\n<!doctype html>\r\n<hr class=\"my-4\">\r\n<div class=\"container\">\r\n    <h2>UserList</h2>\r\n    ");
             EndContext();
             BeginContext(226, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99f5ad63ebe84f328e0072c0f8c1ad72", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1fa763632d5a41bc9329fdfabea2d5e8", async() => {
                 BeginContext(320, 3, true);
                 WriteLiteral("Add");
                 EndContext();
@@ -142,12 +142,12 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("</td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(503, 513, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7030939cb8584123adb70af27f7ade3c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d6200eae95364392a6c7fa036988dbf3", async() => {
                 BeginContext(590, 26, true);
                 WriteLiteral("\r\n                        ");
                 EndContext();
                 BeginContext(616, 107, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d841676eeeb404b9f818120944c4e15", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8357e50f464d4eb5958f6cd01171ac9f", async() => {
                     BeginContext(715, 4, true);
                     WriteLiteral("Edit");
                     EndContext();
@@ -185,7 +185,7 @@ using Microsoft.AspNetCore.Localization;
                 WriteLiteral("\r\n                        <button type=\"submit\" class=\"btn btn-sm btn-danger\">\r\n                            Delete\r\n                        </button>\r\n                        ");
                 EndContext();
                 BeginContext(898, 89, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94dff6d7e35648e080d2cbe1c2171797", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b58cedabcc534f119e9a91495be9646b", async() => {
                     BeginContext(978, 5, true);
                     WriteLiteral("Roles");
                     EndContext();
