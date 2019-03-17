@@ -3,32 +3,28 @@
 @{
     ViewData["Title"] = "Create";
 }
-<div class="container">
-    <h2 class="text-center">@Localizer["CreateBlog"]</h2>
-    <hr />
-    <div class="row">
-        <div class="container">
-            <div class="validation" asp-validation-summary="All"></div>
-            <form asp-action="CreateBlog" asp-controller="Home">
-                <div class="form-group">
-                    <label asp-for="Title" class="control-label">@Localizer["Title"]</label>
-                    <input type="text" asp-for="Title" class="form-control" />
-                    <span asp-validation-for="Title" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Description" class="control-label">@Localizer["Description"]</label>
-                    <textarea asp-for="Description" class="form-control"></textarea>
-                    <span asp-validation-for="Description" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value=@Localizer["Create"] class="btn btn-default" />
-                </div>
-            </form>
+<div class="container my-5 ">
+    <div class="card">
+        <h4 class="card-header unique-color text-white">Creating blog</h4>
+        <div class="card-body ">
+            <div class="container">
+                <div class="validation" asp-validation-summary="All"></div>
+                <form asp-action="CreateBlog" asp-controller="Home">
+                    <div class="md-form">
+                        <input type="text" asp-for="Title" class="form-control" placeholder="Title" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                    <div class="md-form">
+                        <input asp-for="Description" class="form-control" placeholder="Description" />
+                        <small class="form-text text-center text-muted mb-4"> Small description about your blog </small>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="md-form align-self-end">
+                         <button type="submit" class="btn btn-info mybtn-rounded ">Create</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <div>
-        <a asp-action="BlogList" asp-controller="Home">@Localizer["BackToList"]</a>
     </div>
 </div>
 @section Scripts {

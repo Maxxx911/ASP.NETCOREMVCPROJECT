@@ -1,35 +1,26 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.mybtn-rounded{
+    border-radius: 10px;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.mycard-height{
+    height:530px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.mypost-top-rounded{
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+.mypost-bacground-image {
+    
+    background: url(../images/ocean.jpg);
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.myavatar-image-circle {
+    height: 75%;
+    border-radius: 90% !important;
+    
 }
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+.mybloc-aroundavatar{
+    margin-left:20px;
 }

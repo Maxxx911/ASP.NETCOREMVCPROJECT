@@ -2,39 +2,48 @@
 @{
     ViewData["Title"] = "PostDetails";
 }
-<div class="container">
-    <h2 class="text-center"> @Model.Title</h2>
-    <hr class="my-4">
-    <div class="blog-post">
-        <p>@Model.Description</p>
-        <h2 class="text-center">Comments</h2>
+<div class="container my-5">
+   
+    <div class="row my-2">
+        <div class="col-md-12">
+            <div class="card-header unique-color text-center ">
+                <h2>@Model.Title</h2>
+            </div>
+            <div class="card card-cascade wider reverse">
+                <div class="view view-cascade overlay">
+                    <img class="card-img-top" height="400" src="~/images/ocean.jpg" alt="Card image cap">
+                </div>
+            </div>
+            <div class="card card-body mt-3">
+                <p style="white-space:pre-line">@Model.Description</p>
+            </div>
+        </div>
     </div>
-    @*<div id="inputForm">
-        <input type="text" id="message" />
-        <input type="button" id="sendBtn" value="Отправить" />
+    <div class="comments-list text-center text-md-left mb-5">
+        <div class="text-center mb-4">
+            <h3 class="font-weight-bold pt-3 mb-5">Comments <span class="badge pink">count comments</span></h3>
+        </div>
+        <!--First row-->
+        <div class="row mb-4">
+            <div class="col-sm-2 col-12 mb-md-0 mb-3">
+                <img src="~/images/avatar.jpg" class="avatar myavatar-image-circle z-depth-1-half">
+            </div>
+
+            <div class="col-sm-10 col-12">
+                    <h4 class="font-weight-bold">Name commenter</h4>
+                <div class="mt-2">
+                    <ul class="list-unstyled">
+                        <li class="comment-date"><i class="fas fa-clock"></i> 05/10/2015</li>
+                    </ul>
+                </div>
+                <p class=" grey-text">
+                   comment's text
+                </p>
+            </div>
+
+        </div>
+        <!--/.First row-->
+       
     </div>
-    <div id="chatroom"></div>
-    <script src="js/signalr.min.js"></script>
-    <script>
-        const hubConnection = new signalR.HubConnectionBuilder()
-            .withUrl("~/chat")
-            .configureLogging(signalR.LogLevel.Information)
-            .build();
-
-        hubConnection.on("Send", function (data) {
-
-            let elem = document.createElement("p");
-            elem.appendChild(document.createTextNode(data));
-            let firstElem = document.getElementById("chatroom").firstChild;
-            document.getElementById("chatroom").insertBefore(elem, firstElem);
-
-        });
-
-        document.getElementById("sendBtn").addEventListener("click", function (e) {
-            let message = document.getElementById("message").value;
-            hubConnection.invoke("Send", message);
-        });
-
-        hubConnection.start();
-    </script>*@
 </div>
+
