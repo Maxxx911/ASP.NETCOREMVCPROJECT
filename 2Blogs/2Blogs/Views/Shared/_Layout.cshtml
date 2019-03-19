@@ -20,21 +20,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/css/mdb.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css">
-    <link rel="stylesheet" href="~/css//style.css">
 
-    <script src="~/js/bootstrap.js" crossorigin="anonymous"></script>
-    <script src="~/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="~/js/mdb.js" crossorigin="anonymous"></script>
-    <script src="~/js/popper.min.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
     <title>@ViewData["Title"] Blogs</title>
 </head>
 <body>
     <header >
-        <nav class="mb-1 navbar navbar-expand-lg navbar-dark fixed-top unique-color">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top unique-color">
             <a class="navbar-brand " href="">Original Site Name</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                  >
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -46,7 +54,7 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="CreateBlog">CreateBlog</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link" asp-controller="JS" asp-action="JavaScriptPage">JS</a>
                     </li>
                     <li class="nav-item">

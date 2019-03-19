@@ -11,9 +11,11 @@ namespace _2Blogs.Models.BlogViewModels
         
         public List<Blog> Blogs { get; set; }
         public List<ApplicationUser> User { get; set; }
+        public List<Tag> Tags { get; set; }
 
-        public BlogViewModel(List<ApplicationUser> claimsPrincipal, List<Blog> list)
+        public BlogViewModel(List<ApplicationUser> claimsPrincipal, List<Blog> list, List<Tag> tags)
         {
+            this.Tags = tags;
             this.User = claimsPrincipal;
             this.Blogs = list;
         }

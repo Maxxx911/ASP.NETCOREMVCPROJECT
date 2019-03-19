@@ -102,7 +102,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("        ");
             EndContext();
             BeginContext(291, 125, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7263e49f35264022a0eb1a5c245134f4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e4e673156764c66b3ae256d82c00341", async() => {
                 BeginContext(397, 15, true);
                 WriteLiteral("Create new post");
                 EndContext();
@@ -147,7 +147,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(426, 121, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c5d03dbbadd4ad8a31acc8756f03c0a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a5a0697b1ae4aeda44ada9d7c047fc7", async() => {
                 BeginContext(532, 11, true);
                 WriteLiteral("Delete Blog");
                 EndContext();
@@ -202,7 +202,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("        <div class=\"row my-2\">\r\n            <div class=\"col-md-12\">\r\n                <div class=\"card-header unique-color text-center \">\r\n                    <h2>");
             EndContext();
             BeginContext(762, 119, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a19d230523c4efd854292f001ee32ae", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec7427ab730d4be981fceb04075fa5f2", async() => {
                 BeginContext(852, 8, true);
                 WriteLiteral("<strong>");
                 EndContext();
@@ -255,7 +255,7 @@ using Microsoft.AspNetCore.Localization;
                         ");
             EndContext();
             BeginContext(1210, 198, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "152f868ce41e411ab2971e78d7562bf0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee968be390414e288d16b21ed08c36da", async() => {
                 BeginContext(1281, 123, true);
                 WriteLiteral("\r\n                            <div class=\"mask rgba-white-slight waves-effect waves-light\"></div>\r\n                        ");
                 EndContext();
@@ -311,7 +311,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("                    ");
             EndContext();
             BeginContext(1717, 123, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34241e7437ca488bbda1c76a422bb78e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f942848931504e12b47976760f10e387", async() => {
                 BeginContext(1825, 11, true);
                 WriteLiteral("Delete Post");
                 EndContext();

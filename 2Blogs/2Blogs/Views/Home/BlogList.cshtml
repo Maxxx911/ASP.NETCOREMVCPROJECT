@@ -8,7 +8,7 @@
 <html lang="en">
 <body>
     <div class="container my-5">
-        <div class="card-deck">
+        <div class="card-deck row">
             @foreach (var blog in Model.Blogs)
             {
                 <div class="col-md-6">
@@ -19,19 +19,27 @@
                                 <div class="mask rgba-white-slight"></div>
                             </a>
                         </div>
+                        <div class="container">
+                            <div class="row">
+                                @foreach (var tag in blog.Tags)
+                                {
+                                    <div class="col-1 mytag-padding">
+                                        <span class="badge badge-pill badge-default">@tag.Name</span>
+                                    </div>
+                                }
+                            </div>
+                        </div>
                         <div class="card-body  flex-column">
 
                             <h3 class="card-title">
                                 <a class="text-dark" asp-controller="Posts" asp-action="PostList" asp-route-id="@blog.Id" asp-route-userid="@blog.User.Id">@blog.Title</a>
                             </h3>
-                            <p class="card-text">@blog.Description</p>
-
-                            <a asp-action="PostList" asp-controller="Posts" asp-route-id="@blog.Id" asp-route-userid="@blog.User.Id">Continue read</a>
+                            <a asp-controller="Posts" asp-action="PostList" asp-route-id="@blog.Id" asp-route-userid="@blog.User.Id">
+                                <p class="card-text mystartdescription-text">@blog.Description</p>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-
             }
         </div>
     </div>

@@ -24,5 +24,46 @@
 .mybloc-aroundavatar{
     margin-left:20px;
 }
+.mytag-padding{
+    margin:5px;
+}
 
+.mystart-image{
+    width:100%;
+    height:100%;
+}
+
+.mystartdescription-text{
+    font-size:2em;
+}
+
+
+@media (max-width: 768px) {
+    .mytitle-text .card-title{
+        font-size: 2em;
+    }
+    .mystartdescription-text{
+        font-size: 1.5em;
+    }
+    .mycard-height{
+        height:300px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .mytitle-text .card-title {
+        font-size: 1.5em;
+    }
+    .mystartdescription-text {
+        font-size: 1em;
+    }
+    .mycard-height {
+        height: 200px;
+    }
+
+}
+
+
+/*Data Source=tcp:asptestproject.database.windows.net,1433;Initial Catalog=asptestdbproject;User ID=alah;Password=123qweASD!*/
 /*Server=(localdb)\\mssqllocaldb;Database=aspnet-_2Blogs-A3121476-D562-4573-8607-ABA3F60DB6C7;Trusted_Connection=True;MultipleActiveResultSets=true*/

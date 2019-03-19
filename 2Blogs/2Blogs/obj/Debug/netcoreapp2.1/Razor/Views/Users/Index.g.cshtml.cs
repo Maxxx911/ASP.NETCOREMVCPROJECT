@@ -92,7 +92,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("<!doctype html>\r\n<hr class=\"my-4\">\r\n    <div class=\"container\" asp-controller=\"Users\">\r\n        ");
             EndContext();
             BeginContext(200, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7bfe13a0d2bd4b719ed5ba9dfb6c6ef4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "33f22868033b462b88276bc840b50542", async() => {
                 BeginContext(246, 21, true);
                 WriteLiteral("Добавить пользователя");
                 EndContext();
@@ -136,12 +136,12 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("</td>\r\n                    <td>\r\n                        ");
             EndContext();
             BeginContext(535, 400, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac0f7e9584964f7e811e693022ffb03c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9542ddee3c9452a91d78b4ef2741572", async() => {
                 BeginContext(622, 30, true);
                 WriteLiteral("\r\n                            ");
                 EndContext();
                 BeginContext(652, 88, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ec0417a3b834f6f81e510674a908c75", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d340c51169e444999b0c508aaca2801", async() => {
                     BeginContext(728, 8, true);
                     WriteLiteral("Изменить");
                     EndContext();

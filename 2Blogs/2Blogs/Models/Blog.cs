@@ -17,6 +17,7 @@ namespace _2Blogs.Models
         public string Description { get; set; }
         public List<Post> Posts { get; set; }
         public ApplicationUser User { get; set; }
+        public List<Tag> Tags { get; set; }
         public Blog()
         {
            

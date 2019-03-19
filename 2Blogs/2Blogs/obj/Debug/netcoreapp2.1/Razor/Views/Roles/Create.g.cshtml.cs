@@ -86,7 +86,7 @@ using Microsoft.AspNetCore.Localization;
             WriteLiteral("\r\n<!doctype html>\r\n<hr class=\"my-4\">\r\n<div class=\"container\">\r\n    ");
             EndContext();
             BeginContext(84, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "049412d0f54046bd95d7459c2114026e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be536395f3a1492d9bc8cccb7c7d9194", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationSummaryTagHelper>();
@@ -110,7 +110,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationSummaryTagHelper.ValidationSumma
             WriteLiteral("\r\n\r\n    ");
             EndContext();
             BeginContext(152, 282, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "009ee3b726e54919a4b4ca4f4a7935ab", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "601732891fe14c3ca55f2fd8e6c51ef2", async() => {
                 BeginContext(192, 235, true);
                 WriteLiteral("\r\n        <div class=\"form-group\">\r\n            <label for=\"name\">Новая роль</label>\r\n            <input name=\"name\" class=\"form-control\" />\r\n        </div>\r\n        <button type=\"submit\" class=\"btn btn-primary\">Добавить</button>\r\n    ");
                 EndContext();

@@ -1,22 +1,20 @@
-﻿using System;
+﻿using _2Blogs.Data;
+using _2Blogs.Models;
+using _2Blogs.Models.BlogViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using _2Blogs.Models;
-using _2Blogs.Data;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
-using _2Blogs.Models.BlogViewModels;
-using Microsoft.AspNetCore.Authorization;
 
 namespace _2Blogs.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController:Controller
     {
         private UserManager<ApplicationUser> _userManager;
-        ApplicationDbContext db;
+        private ApplicationDbContext db;
         public HomeController(ApplicationDbContext context, UserManager<ApplicationUser> usr)
         {
             db = context;
@@ -24,12 +22,12 @@ namespace _2Blogs.Controllers
         }
         public IActionResult Index()
         {
-            
+
             return View();
         }
         public IActionResult BlogList()
         {
-            BlogViewModel blogViewModel = new BlogViewModel(_userManager.Users.ToList(), db.Blogs.ToList());
+            BlogViewModel blogViewModel = new BlogViewModel(_userManager.Users.ToList(), db.Blogs.ToList(), db.Tags.ToList());
             return View(blogViewModel);
         }
         public IActionResult About()
@@ -53,23 +51,34 @@ namespace _2Blogs.Controllers
         }
         [HttpPost]
         [Authorize(Roles = "admin, user")]
-        public async Task<IActionResult> CreateBlog(Blog blog)
+        public async Task<IActionResult> CreateBlog(CreateBlogViewModel createBlogViewModel)
         {
             if (ModelState.IsValid)
             {
+                List<Tag> tags = new List<Tag>();
+                tags.Add(new Tag { Name = createBlogViewModel.tagName });
+                Blog newBlog = new Blog()
+                {
+                    Description = createBlogViewModel.blogDescription,
+                    Title = createBlogViewModel.blogTitle,
+                    Tags = tags
+                };
+
+
+
                 ApplicationUser user = await _userManager.GetUserAsync(HttpContext.User);
-                blog.User = user;
-                db.Blogs.Add(blog);
+                newBlog.User = user;
+                db.Blogs.Add(newBlog);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(blog);
+            return View(createBlogViewModel);
         }
 
         public async Task<IActionResult> DeleateBlog(string blogid)
         {
             Blog delblog = await db.Blogs.FindAsync(blogid);
-            
+
             if (delblog != null)
             {
                 db.Blogs.Remove(delblog);

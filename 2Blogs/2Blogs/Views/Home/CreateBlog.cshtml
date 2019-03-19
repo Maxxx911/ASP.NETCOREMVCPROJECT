@@ -1,8 +1,10 @@
-﻿@model _2Blogs.Models.Blog
+﻿@model _2Blogs.Models.BlogViewModels.CreateBlogViewModel
 @inject IViewLocalizer Localizer
 @{
     ViewData["Title"] = "Create";
 }
+<link rel="stylesheet" href="choices.css">
+
 <div class="container my-5 ">
     <div class="card">
         <h4 class="card-header unique-color text-white">Creating blog</h4>
@@ -11,16 +13,20 @@
                 <div class="validation" asp-validation-summary="All"></div>
                 <form asp-action="CreateBlog" asp-controller="Home">
                     <div class="md-form">
-                        <input type="text" asp-for="Title" class="form-control" placeholder="Title" />
-                        <span asp-validation-for="Title" class="text-danger"></span>
+                        <input type="text" asp-for="blogTitle" class="form-control" placeholder="Title" />
+                        <span asp-validation-for="blogTitle" class="text-danger"></span>
                     </div>
                     <div class="md-form">
-                        <input asp-for="Description" class="form-control" placeholder="Description" />
+                        <input asp-for="blogDescription" class="form-control" placeholder="Description" />
                         <small class="form-text text-center text-muted mb-4"> Small description about your blog </small>
-                        <span asp-validation-for="Description" class="text-danger"></span>
+                        <span asp-validation-for="blogDescription" class="text-danger"></span>
+                    </div>
+                    <div class="md-form">
+                        <input type="text" asp-for="tagName" class="form-control" placeholder="Tag" />
+
                     </div>
                     <div class="md-form align-self-end">
-                         <button type="submit" class="btn btn-info mybtn-rounded ">Create</button>
+                        <button type="submit" class="btn btn-info mybtn-rounded ">Create</button>
                     </div>
                 </form>
             </div>
@@ -29,6 +35,7 @@
 </div>
 @section Scripts {
 
+    
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 }

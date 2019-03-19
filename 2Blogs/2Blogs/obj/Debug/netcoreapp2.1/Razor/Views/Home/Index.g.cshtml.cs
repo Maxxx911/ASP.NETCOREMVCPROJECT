@@ -105,7 +105,7 @@ using Microsoft.Extensions.Options;
             WriteLiteral("<!doctype html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(446, 1114, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d182f63fa1d4aa4b49be68b367a14a2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a66dacc2981f498a9a68b0880f803216", async() => {
                 BeginContext(452, 279, true);
                 WriteLiteral(@"
     <div class=""container"">
@@ -116,7 +116,7 @@ using Microsoft.Extensions.Options;
                         ");
                 EndContext();
                 BeginContext(731, 103, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "30e5fe5abddf4cec9f20e5e8d1de0f67", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f3e2de47649c4730b9307a3a7c1bcd36", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -137,7 +137,7 @@ using Microsoft.Extensions.Options;
                 WriteLiteral("\r\n                        ");
                 EndContext();
                 BeginContext(860, 151, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d91da6b86ed44c48b29f2e59a56af9b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "03578e2df0d246ea9677f6ff1111e422", async() => {
                     BeginContext(909, 98, true);
                     WriteLiteral("\r\n                            <div class=\"mask rgba-white-slight\"></div>\r\n                        ");
                     EndContext();
@@ -181,7 +181,7 @@ using Microsoft.Extensions.Options;
                 WriteLiteral("</p>\r\n                        <p class=\"lead mb-0\">");
                 EndContext();
                 BeginContext(1323, 113, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b4dabaef0e35479cae8a06cc32b3928a", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c18e872c89e84ff398ef2408d4d6ba9d", async() => {
                     BeginContext(1409, 23, false);
 #line 31 "D:\study\5sem\ИТиРОД\Lab2\ASP.NETCOREMVCPROJECT\2Blogs\2Blogs\Views\Home\Index.cshtml"
                                                                                                                              Write(Localizer["CreateBlog"]);

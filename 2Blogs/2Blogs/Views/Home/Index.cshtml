@@ -20,15 +20,23 @@
             <div class="col-md-12">
                 <div class="card card-cascade wider reverse my-4">
                     <div class="view view-cascade overlay z-depth-3 ">
-                        <img class="card-img-top view-cascade overlay" src="~/images/home page blog.jpg" als="" height="530" />
+                        <img class="card-img-top view-cascade overlay mystart-image" src="~/images/home page blog.jpg" als="" height="530" />
                         <a asp-controller="Home" asp-action="CreateBlog">
                             <div class="mask rgba-white-slight"></div>
                         </a>
                     </div>
                     <div class="card-body card-body-cascade text-center">
-                        <h1 class="display-4 font-italic">@Localizer["Welcome"]</h1>
-                        <p class="lead my-3">@Localizer["Description"]</p>
-                        <p class="lead mb-0"><a asp-controller="Home" asp-action="CreateBlog" class="text-white font-weight-bold">@Localizer["CreateBlog"]</a></p>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="display-4 font-italic mytitle-text">Welcome to web site</h1>
+
+                            </div>
+                        </div>
+                        <p class="lead my-3 mystartdescription-text">
+                        Here you will find blogs of various people.You can also tell 
+                        everyone that you are worried or will share different experiences
+                        or just interesting life stories by simply creating your own personal blog.
+                        </p>
                     </div>
                 </div>
 
